@@ -14,7 +14,7 @@ const entityManager = (ctx: CanvasRenderingContext2D) => {
   const xCaution = new CautionBlockX(ctx);
   xCaution.hide();
   const yCaution = new CautionBlockY(ctx);
-	const yLight = new RoadBlockY(ctx);
+  const yLight = new RoadBlockY(ctx);
   //Caution and roadblock bools;
   let xIsGreen: boolean = true;
   let xIsCaution: boolean = false;
@@ -24,13 +24,16 @@ const entityManager = (ctx: CanvasRenderingContext2D) => {
   roadblockBehavior();
 
   //Car spawn handler
-  const spawnInterval = setInterval(() => {
-    if (xIsGreen) {
-      let count = 1;
-      activeCars.push(new XCar(0, ctx, count));
-      count++;
-    }
-  }, 2000);
+	let spawnInterval: any = null;
+  if (xIsGreen) {
+    spawnInterval = setInterval(() => {
+      if (xIsGreen) {
+        let count = 1;
+        activeCars.push(new XCar(0, ctx, count));
+        count++;
+      }
+    }, 1000);
+  }
 
   //Car movement handler
   const moveInterval = setInterval(() => {
