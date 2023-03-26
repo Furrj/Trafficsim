@@ -81,18 +81,18 @@ export class RoadBlockY {
     this.ctx = ctx;
     ctx.fillStyle = "red";
     ctx.fillRect(
-      canvasInfo.canvasWidth / 2 - 20,
+      canvasInfo.canvasWidth / 2 - 19,
       canvasInfo.canvasHeight / 2 + 20,
-      this.width,
+      this.width - 2,
       this.height
     );
   }
 
   hide() {
     this.ctx.clearRect(
-      canvasInfo.canvasWidth / 2 - 19.5,
+      canvasInfo.canvasWidth / 2 - 19,
       canvasInfo.canvasHeight / 2 + 20,
-      this.width - 0.5,
+      this.width - 1,
       this.height
     );
   }
@@ -100,9 +100,9 @@ export class RoadBlockY {
   unhide() {
     this.ctx.fillStyle = "red";
     this.ctx.fillRect(
-      canvasInfo.canvasWidth / 2 - 20,
+      canvasInfo.canvasWidth / 2 - 19,
       canvasInfo.canvasHeight / 2 + 20,
-      this.width,
+      this.width - 2,
       this.height
     );
   }
@@ -117,18 +117,18 @@ export class CautionBlockY {
     this.ctx = ctx;
     ctx.fillStyle = "orange";
     ctx.fillRect(
-      canvasInfo.canvasWidth / 2 - 20,
+      canvasInfo.canvasWidth / 2 - 19,
       canvasInfo.canvasHeight / 2 + 20,
-      this.width,
+      this.width - 2,
       this.height
     );
   }
 
   hide() {
     this.ctx.clearRect(
-      canvasInfo.canvasWidth / 2 - 19.5,
+      canvasInfo.canvasWidth / 2 - 19,
       canvasInfo.canvasHeight / 2 + 20,
-      this.width - 0.5,
+      this.width - 2,
       this.height
     );
   }
@@ -136,9 +136,9 @@ export class CautionBlockY {
   unhide() {
     this.ctx.fillStyle = "orange";
     this.ctx.fillRect(
-      canvasInfo.canvasWidth / 2 - 20,
+      canvasInfo.canvasWidth / 2 - 19,
       canvasInfo.canvasHeight / 2 + 20,
-      this.width,
+      this.width - 2,
       this.height
     );
   }
