@@ -13,9 +13,8 @@ const entityManager = (ctx: CanvasRenderingContext2D) => {
   xLight.hide();
   const xCaution = new CautionBlockX(ctx);
   xCaution.hide();
-  const yLight = new RoadBlockY(ctx);
   const yCaution = new CautionBlockY(ctx);
-  yCaution.hide();
+	const yLight = new RoadBlockY(ctx);
   //Caution and roadblock bools;
   let xIsGreen: boolean = true;
   let xIsCaution: boolean = false;
